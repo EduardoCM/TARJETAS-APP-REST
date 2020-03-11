@@ -1,0 +1,33 @@
+<div cclass="card border-primary mb-3">
+    <div class="card-header">Tarjetas Registradas</div>
+    <div class="card-body">
+        <h5 class="card-title"></h5>
+
+        <table class="table table-bordered table-striped">
+
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Titular</th>
+                    <th>Entidad</th>
+                    <th>Numero</th>
+                    <th>Marca</th>
+                    <th>Fecha Cauducidad</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let tarjeta of tarjetas">
+                    <td>{{ tarjeta.id }}</td>
+                    <td>{{ tarjeta.nombreTitular}}</td>
+                    <td>{{ tarjeta.nombreEntidad}}</td>
+                    <td>{{ tarjeta.numeroTarjeta}}</td>
+                    <td>{{ tarjeta.marca}}</td>
+                    <td>{{ tarjeta.fechaCaudicidad}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
