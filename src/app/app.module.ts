@@ -1,19 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-
 import { HeaderComponent } from './header/header.component';
 import { TarjetasComponent } from './tarjetas/tarjetas.component';
-
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from './tarjetas/form.component';
 
-import { HttpClientModule } from '@angular/common/http'
-
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {path: '', redirectTo: '/tarjetas', pathMatch: 'full'},
-  {path: 'tarjetas', component: TarjetasComponent}
+  {path: 'tarjetas', component: TarjetasComponent},
+  {path: 'form', component: FormComponent}
 ]
 
 
@@ -21,12 +20,14 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    TarjetasComponent
+    TarjetasComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

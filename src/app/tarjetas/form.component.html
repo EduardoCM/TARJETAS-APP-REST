@@ -1,0 +1,67 @@
+<div class="card bg-light-gray text-dark">
+    <div class="card-header">Tarjeta test</div>
+    <div class="card-body">
+
+        <form (ngSubmit)="create()">
+            <div class="form-group row">
+                <label for="nombreTitular" class="col-form-label col-sm-2">Nombre Titular</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="tarjeta.nombreTitular" name="nombreTitular">
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label for="nombreEntidad" class="col-form-label col-sm-2">Nombre Entidad</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="tarjeta.nombreEntidad" name="nombreEntidad">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="numeroTarjeta" class="col-form-label col-sm-2">Numero de la tarjeta</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="tarjeta.numeroTarjeta" name="numeroTarjeta">
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label for="cvv" class="col-form-label col-sm-2">Cvv</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="tarjeta.cvv" name="cvv">
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label for="fechaCaudicidad" class="col-form-label col-sm-2">Fecha Caudicidad</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="tarjeta.fechaCaudicidad" name="fechaCaudicidad">
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label for="marca" class="col-form-label col-sm-2">Marca</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="tarjeta.marca" name="marca">
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <button class="btn btn-primary" role="button">Crear</button>
+
+                </div>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+
+</div>
